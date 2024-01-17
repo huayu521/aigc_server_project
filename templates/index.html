@@ -1,0 +1,68 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>害羞工厂商城</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+<body style="text-align: center;">
+
+    <!-- 第一部分：Text 文本展示 -->
+    <div style="margin-bottom: 20px;">
+        <h1>害羞工厂商城</h1>
+        <p>上传一张你的空间照片，客厅，卧室，或是办公室。
+            请保持拍摄角度正常，照片清晰，光度均衡，便于我们识别空间内的家居风格和摆放。
+            目前仅支持png和jpg格式。</p>
+    </div>
+
+    <!-- 第二部分：按钮 -->
+    <div style="margin-bottom: 20px;">
+        <input type="file" id="fileInput" style="display: none;">
+        <button onclick="uploadImage()">上传室内照片</button>
+        <button id="startButton">开始</button>
+        <button id="finishButton">完成</button>
+    </div>
+    <div style="margin-bottom: 20px;">
+        <!-- 第三部分：图片 -->
+        <canvas id="myCanvas"></canvas>
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+        <p>请选择想要购买的家具</p>
+        <form id="selectionTypeForm">
+            <label>
+                <input type="radio" name="Typeselection" value="地毯"> 地毯
+            </label>
+            <label>
+                <input type="radio" name="Typeselection" value="壁画"> 壁画
+            </label>
+            <label>
+                <input type="radio" name="Typeselection" value="衣柜"> 衣柜
+            </label>
+        </form>
+        <p>请选择想要的风格</p>
+        <form id="selectionStyleForm">
+            <label>
+                <input type="radio" name="Styleselection" value="波斯风"> 波斯风
+            </label>
+            <label>
+                <input type="radio" name="Styleselection" value="欧式"> 欧式
+            </label>
+            <label>
+                <input type="radio" name="Styleselection" value="复古"> 复古
+            </label>
+        </form>
+        <button type="button" onclick="submitSelection()">确定</button>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        
+        
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

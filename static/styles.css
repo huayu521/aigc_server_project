@@ -1,0 +1,40 @@
+/* 添加样式用于按钮 */
+  #uploadButton {
+    background-size: cover; /* 确保背景图覆盖整个按钮 */
+    padding: 10px; /* 设置按钮内边距 */
+    border: none; /* 移除边框 */
+    color: white; /* 设置文字颜色 */
+    font-size: 16px; /* 设置文字大小 */
+    cursor: pointer; /* 设置鼠标悬停样式 */
+  }
+  #circleButton {
+    width: 60px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #circleButton.filled {
+    background-color: black;
+    border: 2px solid transparent;
+  }
+
+  .filled {
+    background-color: #000;
+  }
+
+  #canvas-container {
+    position: relative;
+}
+
+#rectangle {
+    position: absolute;
+    border: 2px solid red;
+    background-color: transparent;
+}
+canvas {
+  border: 1px solid #000;
+}
